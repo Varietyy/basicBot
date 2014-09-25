@@ -41,7 +41,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://api.myjson.com/bins/15ie5", function (json) {
+        $.get("https://raw.githubusercontent.com/Varietyy/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
