@@ -171,14 +171,14 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Twerkbot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
             botName: "Twerkbot",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 240,
             afkRemoval: true,
             maximumDc: 120,
@@ -1163,7 +1163,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            API.sendChat("/me 2.1.0 is running!");
+            API.sendChat("/me is running!");
         },
         commands: {
             executable: function (minRank, chat) {
