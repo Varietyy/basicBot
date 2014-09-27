@@ -2629,7 +2629,7 @@ diceCommand: {
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         storeToStorage();
-                        API.sendChat("/me @"+ data.un +" shut down the bot.");
+                        API.sendChat(basicBot.chat.kill);
                         basicBot.disconnectAPI();
                         setTimeout(function () {
                             kill();
