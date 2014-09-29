@@ -3646,7 +3646,7 @@ if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 
-if(data.message.indexOf('!grab') === API.ROLE.BOUNCER){
+if(API.getUser(data.fromID).permission >= 1 && msg.indexOf("!grab") > -1) {
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] grabbing this!")
 $(".icon-curate").click();
