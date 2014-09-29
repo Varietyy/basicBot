@@ -3646,9 +3646,9 @@ if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 
-if(API.getUser(data.fromID).permission >= 1 && msg.indexOf("!grab") > -1) {
+if (API.getUser(data.fromID).permission >= 1 && msg.indexOf("!grab") > -1) {
 API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] grabbing this!")
+API.sendChat("["+ data.un +"] grabbing this!");
 $(".icon-curate").click();
 $($(".curate").children(".menu").children().children()[0]).mousedown();
 }
