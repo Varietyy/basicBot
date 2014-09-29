@@ -3645,6 +3645,12 @@ API.sendChat("["+ data.un +"] ( . Y . )");
 if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
+
+if(data.message.indexOf('!grab') === 0) && API.hasPermission(data.fromID, API.ROLE.BOUNCER){
+API.moderateDeleteChat(data.cid);
+API.sendChat("["+ data.un +"] grabbing this!")
+$(".icon-curate").click();
+$($(".curate").children(".menu").children().children()[0]).mousedown();
 }
 });
 
