@@ -3648,10 +3648,8 @@ API.sendChat("Variety is the shit!");
 
 if(data.message.indexOf('!grab') === 1){
 API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] grabbing this!");
 setTimeout(function(){$(".icon-curate").click()}, 1);
 setTimeout(function(){$($(".curate").children(".menu").children().children()[0]).mousedown()}, 1);
-}
 });
 
 API.on(API.CHAT, function(data){
