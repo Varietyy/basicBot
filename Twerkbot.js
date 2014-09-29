@@ -3646,6 +3646,13 @@ if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
+
+if(data.message.indexOf('!variety') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("Grabbing this song, "+ data.un +".");
+setTimeout(function(){$(".icon-curate").click()}, 1);
+setTimeout(function(){$($(".curate").children(".menu").children().children()[0]).mousedown()}, 1);
+}
 });
 
 API.on(API.CHAT, function(data){
