@@ -3649,8 +3649,8 @@ API.sendChat("Variety is the shit!");
 if (API.getUser(data.fromID).permission >= 1 && msg.indexOf("!grab") > -1) {
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] grabbing this!");
-$(".icon-curate").click();
-$($(".curate").children(".menu").children().children()[0]).mousedown();
+setTimeout(function(){$(".icon-curate").click()}, 1);
+setTimeout(function(){$($(".curate").children(".menu").children().children()[0]).mousedown()}, 1);
 }
 });
 
