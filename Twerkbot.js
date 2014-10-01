@@ -180,7 +180,7 @@
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 240,
-            afkRemoval: true,
+            afkRemoval: false,
             maximumDc: 120,
             bouncerPlus: true,
             lockdownEnabled: false,
