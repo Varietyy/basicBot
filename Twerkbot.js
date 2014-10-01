@@ -211,7 +211,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: true,
-            opLink: null,
+            opLink: "http://goo.gl/EANOvG",
             rulesLink: null,
             themeLink: null,
             fbLink: null,
@@ -219,7 +219,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
