@@ -3584,7 +3584,7 @@ API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!props') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat(""+ data.un + props to @"+ API.getDJ().username +". :thumbsup:");
+API.sendChat(""+ data.un +" just gave props to @"+ API.getDJ().username +". :thumbsup:");
 }
  
 if(data.message.indexOf('!order a bowl') === 0){
