@@ -4,6 +4,17 @@ Commands:
 X specifies a number
 arguments between ( ) are optional
 
+Extras
+-----------
+
+|Command | Arguments |  Description |
+|:------:|:---------:|:--------------------------------------:|
+|!variety | | Tells you how awesome Variety is.
+|!tits | | Shows you tits.
+|!pass | | Passes a blunt to a random user.
+|!order a bowl | | Gives you a bowl.
+|!order a beer | | Gives you a beer.
+|!order a burger | | Gives you a burger.
 
 Manager
 -------
