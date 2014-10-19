@@ -5,10 +5,10 @@
     "datarestored": "Previously stored data successfully retrieved.",
     "greyuser": "Only bouncers and up can run a bot.",
     "bouncer": "The bot can't move people when it's run as a bouncer.",
-    "online": "/me %%BOTNAME%% v%%VERSION%% online!",
+    "online": "/me %%BOTNAME%%  online!",
 
 
-    "welcome": "Hello, @%%NAME%%. Welcome to TRNT!",
+    "welcome": "Hello, @%%NAME%%.",
     "welcomeback": "Hey, @%%NAME%%. Welcome back!",
     "songknown": "/me :repeat: This song has been played %%PLAYS%% time(s) in the last %%TIMETOTAL%%, last play was %%LASTTIME%% ago. :repeat:",
     "timelimit": "/me @%%NAME%%, your song is longer than %%MAXLENGTH%% minutes, you need permission to play longer songs.",
