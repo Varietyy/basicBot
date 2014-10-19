@@ -16,7 +16,7 @@
     "isblacklisted": "/me This track is on the %%BLACKLIST%% blacklist! Skipping...",
 
 
-    "isopen": "/me @%%NAME%% opened the roulette! Type !join to participate!",
+    "isopen": "/me Roulette Open! Type !join to participate!",
     "winnerpicked": "/me A winner has been picked! @%%NAME%% to position %%POSITION%%.",
 
 
