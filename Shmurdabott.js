@@ -110,7 +110,7 @@
         var json_sett = null;
         var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
-        var ref_bot = "Twerkbot=";
+        var ref_bot = "ShmurdaBot=";
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
             var link = info.substring(ind_ref + ref_bot.length, info.length);
@@ -167,21 +167,21 @@
     var basicBot = {
         version: "2.1.0",
         status: false,
-        name: "Twerkbot",
+        name: "Variety",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Twerkbot.js",
+        scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Shmurdabot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "Twerkbot",
+            botName: "Shmurda Bot",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 240,
             afkRemoval: false,
-            maximumDc: 120,
+            maximumDc: 1000,
             bouncerPlus: true,
             lockdownEnabled: false,
             lockGuard: false,
@@ -211,7 +211,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: true,
-            opLink: "http://goo.gl/EANOvG",
+            opLink: null,
             rulesLink: null,
             themeLink: null,
             fbLink: null,
@@ -3584,12 +3584,7 @@ API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!props') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] [!props] props to @"+ API.getDJ().username +". Nice play!");
-}
- 
-if(data.message.indexOf('!twerk') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] Twerkin' dat ass!");
+API.sendChat(""+ data.un + props to @"+ API.getDJ().username +". :thumbsup:");
 }
  
 if(data.message.indexOf('!order a bowl') === 0){
@@ -3607,36 +3602,6 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Here's your burger! :hamburger:");
 }
  
-if(data.message.indexOf('!order a cake') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] The cake is definitely a lie! :cake:");
-}
- 
-if(data.message.indexOf('!sc') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] [!sc] TRNT Soundcloud: http://goo.gl/yElQTr");
-}
- 
-if(data.message.indexOf('!fb') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] [!fb] TRNT Facebook: http://goo.gl/UYuQB8");
-}
- 
-if(data.message.indexOf('!twitter') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] [!twitter] TRNT Twitter: http://goo.gl/tZW0R8");
-}
- 
-if(data.message.indexOf('!yt') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] [!yt] TRNT YouTube: http://goo.gl/m0wkrx");
-}
- 
-if(data.message.indexOf('!love') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] :purple_heart:");
-}
- 
 if(data.message.indexOf('!tits') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] ( . Y . )");
@@ -3647,7 +3612,7 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
-if(data.message.indexOf('!grab') === 1){
+if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +".");
 setTimeout(function(){$(".icon-curate").click()}, 1);
@@ -3657,10 +3622,10 @@ setTimeout(function(){$($(".curate").children(".menu").children().children()[0])
 
 API.on(API.CHAT, function(data){
  
-if(data.message.indexOf('!twit') === 0){
+if(data.message.indexOf('!pass') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("@" + room[userR].username + " is a twit!");
+API.sendChat("Blunt passed to @" + room[userR].username + ".");
 }
 });
