@@ -170,7 +170,7 @@
         name: "Variety",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Shmurdabot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "http://goo.gl/Yxn82c",
         chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
         chat: null,
         loadChat: loadChat,
