@@ -790,10 +790,10 @@
             if (typeof lastplay === 'undefined') return void (0);
             if (basicBot.settings.songstats) {
                 if (typeof basicBot.chat.songstatistics === "undefined") {
-                    API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
+                    API.sendChat("[" + obj.lastPlay.dj.attributes.username + "] | :thumbsup: " + lastplay.score.positive + " | :star: " + lastplay.score.grabs + " | :thumbsdown: " + lastplay.score.negative + " |");
                 }
                 else {
-                    API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
+                    API.sendChat("[" + obj.lastPlay.dj.attributes.username + "] | :thumbsup: " + lastplay.score.positive + " | :star: " + lastplay.score.grabs + " | :thumbsdown: " + lastplay.score.negative + " |");
                 }
             }
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
