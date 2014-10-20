@@ -3623,6 +3623,18 @@ API.sendChat(""+ data.un +" just gave props to @"+ API.getDJ().username +". :thu
 }
 });
 
+(function(){
+        var skipping = false, skipThreshold = 8;
+        API.on(API.SCORE_UPDATE,function(score){
+                if (score.negative >= skipThreshold && !skipping) {
+                        skipping = true;
+                        API.once(API.DJ_ADVANCE,function(){skipping = false;});
+                        API.sendChat("@"+ API.getDJ().username +" too many meh\'s.");
+                        API.moderateForceSkip();
+                }
+        });
+})();
+
 API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!pass') === 0){
