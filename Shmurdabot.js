@@ -3607,7 +3607,7 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
-if(data.message.indexOf('!grab') === 3){
+if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +".");
 setTimeout(function(){$(".icon-curate").click()}, 1);
