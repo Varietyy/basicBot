@@ -3582,17 +3582,17 @@ diceCommand: {
 
 API.on(API.CHAT, function(data){
  
-if(data.message.indexOf('!order a bowl') === 0){
+if(data.message.indexOf('!bowl') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Toke up! :deciduous_tree::fire:");
 }
  
-if(data.message.indexOf('!order a beer') === 0){
+if(data.message.indexOf('!beer') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Cheers! :beers:");
 }
  
-if(data.message.indexOf('!order a burger') === 0){
+if(data.message.indexOf('!burger') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Here's your burger! :hamburger:");
 }
@@ -3607,7 +3607,7 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
-if(data.message.indexOf('!grab') === 0){
+if(data.message.indexOf('!grab') === 3){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +".");
 setTimeout(function(){$(".icon-curate").click()}, 1);
@@ -3621,6 +3621,6 @@ if(data.message.indexOf('!pass') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("Blunt passed to @" + room[userR].username + ".");
+API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + ".");
 }
 });
