@@ -12,9 +12,9 @@ Extras
 |!variety | | Tells you how awesome Variety is.
 |!tits | | Shows you tits.
 |!pass | | Passes a blunt to a random user.
-|!order a bowl | | Gives you a bowl.
-|!order a beer | | Gives you a beer.
-|!order a burger | | Gives you a burger.
+|!bowl | | Gives you a bowl.
+|!beer | | Gives you a beer.
+|!burger | | Gives you a burger.
 
 Manager
 -------
