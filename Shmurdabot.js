@@ -3617,6 +3617,14 @@ setTimeout(function(){$($(".curate").children(".menu").children().children()[0])
 
 API.on(API.CHAT, function(data){
  
+if(data.message.indexOf('!props') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat(""+ data.un +" just gave props to @"+ API.getDJ().username +". :thumbsup:");
+}
+});
+
+API.on(API.CHAT, function(data){
+ 
 if(data.message.indexOf('!pass') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
