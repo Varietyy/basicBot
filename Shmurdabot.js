@@ -788,14 +788,7 @@
         eventDjadvance: function (obj) {
             var lastplay = obj.lastPlay;
             if (typeof lastplay === 'undefined') return void (0);
-            if (basicBot.settings.songstats) {
-                if (typeof basicBot.chat.songstatistics === "undefined") {
-                    API.sendChat("[" + obj.lastPlay.dj.attributes.username + "] | :thumbsup: " + lastplay.score.positive + " | :star: " + lastplay.score.grabs + " | :thumbsdown: " + lastplay.score.negative + " |");
-                }
-                else {
-                    API.sendChat("[" + obj.lastPlay.dj.attributes.username + "] | :thumbsup: " + lastplay.score.positive + " | :star: " + lastplay.score.grabs + " | :thumbsdown: " + lastplay.score.negative + " |");
-                }
-            }
+API.sendChat("[" + obj.lastPlay.dj.attributes.username + "] | :thumbsup: " + lastplay.score.positive + " | :star: " + lastplay.score.grabs + " | :thumbsdown: " + lastplay.score.negative + " |");
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
             basicBot.room.roomstats.totalMehs += lastplay.score.negative;
             basicBot.room.roomstats.totalCurates += lastplay.score.grabs;
