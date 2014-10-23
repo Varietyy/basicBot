@@ -3585,10 +3585,6 @@ if(data.message.indexOf('!bowl') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Toke up! :deciduous_tree::fire:");
 }
-
-if(data.message.indexOf('@Variety, you have been afk for 1h2m, please respond within 2 minutes or you will be removed.') === 0){
-API.sendChat("fuck you @"+ data.un +".");
-}
  
 if(data.message.indexOf('!beer') === 0){
 API.moderateDeleteChat(data.cid);
