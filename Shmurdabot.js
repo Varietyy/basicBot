@@ -3118,7 +3118,7 @@ diceCommand: {
 
             rouletteCommand: {
                 command: 'roulette',
-                rank: 'cohost',
+                rank: 'Manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
