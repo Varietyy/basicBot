@@ -846,7 +846,7 @@
                 basicBot.room.autoskipTimer = setTimeout(function () {
                     console.log("Skipping track.");
                     API.moderateForceSkip();
-                }, remaining + 1000);
+                }, remaining + 3000);
             }
             storeToStorage();
 
@@ -2983,11 +2983,12 @@ diceCommand: {
                             }
                             else if (time > 30) {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.MEDIUM);
-                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
-                                setTimeout(function (id) {
-                                    API.moderateUnmuteUser(id);
-                                }, time * 60 * 1000, user.id);
-                            }
++                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
++                                setTimeout(function (id) {
++                                    API.moderateUnmuteUser(id);
++                                }, time * 60 * 1000, user.id);
++                            }
++                            else if (time > 15) {
                             else {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.SHORT);
                                 API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
