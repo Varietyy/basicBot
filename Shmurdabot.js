@@ -2989,7 +2989,6 @@ diceCommand: {
 +                                }, time * 60 * 1000, user.id);
 +                            }
 +                            else if (time > 15) {
-                            else {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.SHORT);
                                 API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
                                 setTimeout(function (id) {
