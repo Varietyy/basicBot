@@ -3592,6 +3592,11 @@ if(data.message.indexOf('!bowl') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Toke up! :deciduous_tree::fire:");
 }
+
+if(data.message.indexOf('!lightskin') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("["+ data.un +"] Lightskin Monday is a day where R&B is allowed. If you don't like it, please hit the mute button.");
+}
  
 if(data.message.indexOf('!beer') === 0){
 API.moderateDeleteChat(data.cid);
