@@ -1165,7 +1165,6 @@
             basicBot.status = true;
             API.sendChat('/cap 1');
             API.setVolume(0);
-                        }
             API.sendChat("/me is running!");
         },
         commands: {
