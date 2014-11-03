@@ -1165,10 +1165,10 @@
             basicBot.status = true;
             API.sendChat('/cap 1');
             API.setVolume(0);
-            /*var emojibutton = $(".icon-emoji-on");
+            var emojibutton = $(".icon-emoji-on");
 -            if (emojibutton.length > 0) {
 -                emojibutton[0].click();
--            }*/
+-            }
             API.sendChat("/me is running!");
         },
         commands: {
