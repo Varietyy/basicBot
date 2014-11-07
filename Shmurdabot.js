@@ -3630,7 +3630,7 @@ API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!props') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat(""+ data.un +" just gave props to @"+ API.getDJ().username +". :thumbsup:");
+API.sendChat(":sparkles: "+ data.un +" just gave props to @"+ API.getDJ().username +".:sparkles:");
 }
 });
 
@@ -3640,7 +3640,7 @@ API.sendChat(""+ data.un +" just gave props to @"+ API.getDJ().username +". :thu
                 if (score.negative >= skipThreshold && !skipping) {
                         skipping = true;
                         API.once(API.DJ_ADVANCE,function(){skipping = false;});
-                        API.sendChat("@"+ API.getDJ().username +" too many meh\'s.");
+                        API.sendChat("@"+ API.getDJ().username +" too many meh\'s. :thumbsdown:");
                         API.moderateForceSkip();
                 }
         });
@@ -3652,6 +3652,6 @@ if(data.message.indexOf('!pass') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + ".");
+API.sendChat(":herb: "+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
 }
 });
