@@ -3620,7 +3620,7 @@ API.sendChat("Variety is the shit!");
 
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("Grabbing this song, "+ data.un +".");
+API.sendChat("Grabbing this song, "+ data.un +" :star:");
 setTimeout(function(){$(".icon-curate").click()}, 1);
 setTimeout(function(){$($(".curate").children(".menu").children().children()[0]).mousedown()}, 1);
 }
@@ -3652,6 +3652,6 @@ if(data.message.indexOf('!pass') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat(":herb: "+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
+API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
 }
 });
