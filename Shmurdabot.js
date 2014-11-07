@@ -161,7 +161,7 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui";
+    var botCreator = "Matthew aka. Yemasthui. Modified by Variety!";
     var botCreatorIDs = [];
 
     var basicBot = {
@@ -223,7 +223,7 @@
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Varietyy/basicBot-customization/master/blacklists/OPList.json"
+                op: "https://rawgit.com/Varietyy/basicBot-customization/master/blacklists/OPList.json"
             }
         },
         room: {
