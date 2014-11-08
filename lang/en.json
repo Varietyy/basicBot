@@ -65,9 +65,9 @@
 
 
 
-"warning1": "@%%NAME%%, AFK for %%TIME%%. 2 minute warning!",
+"warning1": "@%%NAME%%, AFK for %%TIME%%. please remain active when in the waitlist.",
 
-"warning2": "@%%NAME%%, please remain active to DJ. Last warning!",
+"warning2": "@%%NAME%%, last warning!",
 
 "afkremove": "@%%NAME%%, removed for AFK. You were at position %%POSITION%%.",
 
