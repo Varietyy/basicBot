@@ -37,7 +37,7 @@
 
 "isopen": "Roulette open! Type !join to participate!",
 
-"winnerpicked": "A winner has been picked! @%%NAME%% to position %%POSITION%%.",
+"winnerpicked": "Winner winner, chicken dinner! @%%NAME%% to position %%POSITION%%.",
 
 
 
@@ -65,11 +65,11 @@
 
 
 
-"warning1": "@%%NAME%%, you have been afk for %%TIME%%, please respond within 2 minutes or you will be removed.",
+"warning1": "@%%NAME%%, AFK for %%TIME%%. 2 minute warning!",
 
-"warning2": "@%%NAME%%, you will be removed due to AFK soon if you don't respond.",
+"warning2": "@%%NAME%%, please remain active to DJ. Last warning!",
 
-"afkremove": "@%%NAME%%, you have been removed for being afk for %%TIME%%. You were at position %%POSITION%%.",
+"afkremove": "@%%NAME%%, removed for AFK. You were at position %%POSITION%%.",
 
 
 
