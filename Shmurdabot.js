@@ -657,14 +657,14 @@
                             continue;
                         }
                         try {
-                            (function (l) {
+                            (function(l){
                                 $.get(basicBot.settings.blacklists[l], function (data) {
                                     if (typeof data === 'string') {
                                         data = JSON.parse(data);
                                     }
                                     var list = [];
                                     for (var prop in data) {
-                                        if (typeof data[prop].mid !== 'undefined') {
+                                        if(typeof data[prop].mid !== 'undefined'){
                                             list.push(data[prop].mid);
                                         }
                                     }
