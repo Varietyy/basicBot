@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.0",
+        version: "2.1.3",
         status: false,
         name: "Variety",
         loggedInID: null,
@@ -657,14 +657,14 @@
                             continue;
                         }
                         try {
-                            (function(l){
+                            (function (l) {
                                 $.get(basicBot.settings.blacklists[l], function (data) {
                                     if (typeof data === 'string') {
                                         data = JSON.parse(data);
                                     }
                                     var list = [];
                                     for (var prop in data) {
-                                        if(typeof data[prop].mid !== 'undefined'){
+                                        if (typeof data[prop].mid !== 'undefined') {
                                             list.push(data[prop].mid);
                                         }
                                     }
@@ -786,15 +786,17 @@
             }
         },
         eventDjadvance: function (obj) {
-            var lastplay = obj.lastPlay;
-            if (basicBot.settings.songstats) {
-            if (typeof basicBot.chat.songstatistics === "undefined") {
-                   API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
- }
-                 else {
-                   API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
-}
-             }
+            var user = basicBot.userUtilities.lookupUser(obj.dj.id)
++            for(var i = 0; i < basicBot.room.users.length; i++){
++                if(basicBot.room.users[i].id === user.id){
++                    basicBot.room.users[i].lastDC = {
++                        time: null,
++                        position: null,
++                        songCount: 0
++                    };
++                }
++            }
++
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
             basicBot.room.roomstats.totalMehs += lastplay.score.negative;
             basicBot.room.roomstats.totalCurates += lastplay.score.grabs;
