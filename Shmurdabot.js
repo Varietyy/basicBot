@@ -786,16 +786,15 @@
             }
         },
         eventDjadvance: function (obj) {
-            var user = basicBot.userUtilities.lookupUser(obj.dj.id)
-+            for(var i = 0; i < basicBot.room.users.length; i++){
-+                if(basicBot.room.users[i].id === user.id){
-+                    basicBot.room.users[i].lastDC = {
-+                        time: null,
-+                        position: null,
-+                        songCount: 0
-+                    };
-+                }
-+            }
+           var lastplay = obj.lastPlay;
+-            if (basicBot.settings.songstats) {
+-            if (typeof basicBot.chat.songstatistics === "undefined") {
+-                   API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
+- }
+-                 else {
+-                   API.sendChat(subChat(basicBot.chat.songstatistics, {title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
+-}
+-             }
 +
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
             basicBot.room.roomstats.totalMehs += lastplay.score.negative;
