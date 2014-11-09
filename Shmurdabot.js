@@ -3655,3 +3655,10 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
 }
 });
+ 
+API.on(API.USER_JOIN, function(user){
+    if(user.id == "3741010")
+    {
+       setTimeout(function(){API.sendChat("My master Variety has joined!");}, 6000);
+    }
+});
