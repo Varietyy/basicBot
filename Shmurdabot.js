@@ -289,7 +289,7 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    var pos = 1;
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
@@ -2876,7 +2876,7 @@ API.sendChat(":sparkles: "+ data.un +" just gave props to @"+ API.getDJ().userna
 }
 });
 
-(function(){
+/*(function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
@@ -2886,7 +2886,7 @@ API.sendChat(":sparkles: "+ data.un +" just gave props to @"+ API.getDJ().userna
                         API.moderateForceSkip();
                 }
         });
-})();
+})();*/
 
 API.on(API.CHAT, function(data){
  
