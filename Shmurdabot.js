@@ -2898,10 +2898,10 @@ API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :h
 }
 });
  
-/*API.on(API.USER_JOIN, function(user){
+API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
     {
-       setTimeout(function(){API.sendChat("Everyone hide, Variety joined!");}, 6000);
+       setTimeout(function(){API.sendChat("Variety joined!");}, 6000);
     }
 });
-}).call(this);*/
+}).call(this);
