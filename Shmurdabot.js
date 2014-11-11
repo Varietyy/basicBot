@@ -2872,11 +2872,11 @@ API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!props') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat(":sparkles: "+ data.un +" just gave props to @"+ API.getDJ().username +" :sparkles:");
+API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +" :sparkles:");
 }
 });
 
-/*(function(){
+(function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
@@ -2886,7 +2886,7 @@ API.sendChat(":sparkles: "+ data.un +" just gave props to @"+ API.getDJ().userna
                         API.moderateForceSkip();
                 }
         });
-})();*/
+})();
 
 API.on(API.CHAT, function(data){
  
@@ -2898,10 +2898,10 @@ API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :h
 }
 });
  
-API.on(API.USER_JOIN, function(user){
+/*API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
     {
-       setTimeout(function(){API.sendChat("My master Variety joined the room!");}, 6000);
+       setTimeout(function(){API.sendChat("Everyone hide, Variety joined!");}, 6000);
     }
 });
-}).call(this);
+}).call(this);*/
