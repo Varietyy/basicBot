@@ -2860,11 +2860,6 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
-if(data.message.indexOf('!NNN') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +" NNN doesn't run shit!");
-}
-
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +" :star:");
@@ -2906,7 +2901,7 @@ API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :h
 API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
     {
-       setTimeout(function(){API.sendChat("Variety joined!");}, 6000);
+       setTimeout(function(){API.sendChat("King Variety joined!");}, 6000);
     }
 });
 }).call(this);
