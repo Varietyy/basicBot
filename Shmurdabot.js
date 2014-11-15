@@ -2860,6 +2860,11 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
+if(data.message.indexOf('!NNN') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("@"+ data.un +" Trent is a virgin.");
+}
+
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +" :star:");
