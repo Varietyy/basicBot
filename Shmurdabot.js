@@ -210,7 +210,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: null,
             rulesLink: null,
             themeLink: null,
@@ -238,12 +238,12 @@
             autoskip: false,
             autoskipTimer: null,
             autodisableInterval: null,
-            autodisableFunc: function () {
+            /*autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
                     API.sendChat('!afkdisable');
                     API.sendChat('!joindisable');
                 }
-            },
+            },*/
             queueing: 0,
             queueable: true,
             currentDJID: null,
