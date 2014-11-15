@@ -2860,10 +2860,10 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
-/*if(data.message.indexOf('!NNN') === 0){
+if(data.message.indexOf('!NNN') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +" Trent is a virgin.");
-}*/
+API.sendChat("@"+ data.un +" NNN doesn't run shit!");
+}
 
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
