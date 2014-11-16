@@ -261,7 +261,7 @@
 
 "commandscd": "[@%%NAME%%] The cooldown for commands by users is now set to %%TIME%% seconds.",
 
-"voteratio": "[@%%NAME%%] @%%USERNAME%% ~ Woots: ' + %%WOOT%% + ', Mehs: %%MEHS%%, Ratio (w/m): %%RATIO%%.",
+"voteratio": "[@%%NAME%%] @%%USERNAME%% ~ Woots: %%WOOT%%, Mehs: %%MEHS%%, Ratio (w/m): %%RATIO%%.",
 
 "website": "Please visit our website: %%LINK%%",
 
