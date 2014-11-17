@@ -2872,6 +2872,7 @@ API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!props') === 0){
 API.moderateDeleteChat(data.cid);
+$('#woot').click();
 API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +" :sparkles:");
 }
 });
