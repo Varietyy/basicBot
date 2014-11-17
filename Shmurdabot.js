@@ -167,7 +167,7 @@
     var basicBot = {
         version: "2.1.3",
         status: false,
-        name: "Shmurda Bot",
+        name: "Thot Bot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Shmurdabot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -176,7 +176,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "Shmurda Bot",
+            botName: "Thot Bot",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 60,
