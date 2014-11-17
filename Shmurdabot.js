@@ -2905,4 +2905,11 @@ API.on(API.USER_JOIN, function(user){
        setTimeout(function(){API.sendChat("King Variety joined!");}, 6000);
     }
 });
+
+API.on(API.DJ_ADVANCE, function(user){
+    if(user.id == "3741010")
+    {
+       $('#woot').click();
+    }
+});
 }).call(this);
