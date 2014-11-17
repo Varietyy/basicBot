@@ -2860,6 +2860,20 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
 }
 
+if(data.message.indexOf('!twerk') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Twerks on @" + room[userR].username + "");
+}
+
+if(data.message.indexOf('!lapdance') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Gives lapdance to @" + room[userR].username + "");
+}
+
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +" :star:");
@@ -2896,6 +2910,14 @@ API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
+}
+});
+
+if(data.message.indexOf('!head') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Gives head to to @" + room[userR].username + "");
 }
 });
  
