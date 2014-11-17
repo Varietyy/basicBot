@@ -2935,7 +2935,7 @@ if(data.message.indexOf('!head') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("Gives head to to @" + room[userR].username + ".");
+API.sendChat("Gives head to @" + room[userR].username + ".");
 }
 });
  
