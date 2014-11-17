@@ -2866,6 +2866,7 @@ var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Twerks on @" + room[userR].username + "");
 }
+});
 
 if(data.message.indexOf('!lapdance') === 0){
 API.moderateDeleteChat(data.cid);
@@ -2873,6 +2874,7 @@ var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives lap dance to @" + room[userR].username + "");
 }
+});
 
 if(data.message.indexOf('!strip') === 0){
 API.moderateDeleteChat(data.cid);
@@ -2880,6 +2882,15 @@ var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Strips for @" + room[userR].username + "");
 }
+});
+
+if(data.message.indexOf('!head') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Gives head to to @" + room[userR].username + "");
+}
+});
 
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
@@ -2917,14 +2928,6 @@ API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat(""+ data.un +" passed the blunt to @" + room[userR].username + " :herb:");
-}
-});
-
-if(data.message.indexOf('!head') === 0){
-API.moderateDeleteChat(data.cid);
-var room = API.getUsers();
-var userR = Math.floor(Math.random() * room.length);
-API.sendChat("Gives head to to @" + room[userR].username + "");
 }
 });
  
