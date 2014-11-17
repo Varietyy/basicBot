@@ -2871,7 +2871,7 @@ if(data.message.indexOf('!lapdance') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("Gives lapdance to @" + room[userR].username + "");
+API.sendChat("Gives lap dance to @" + room[userR].username + "");
 }
 
 if(data.message.indexOf('!strip') === 0){
