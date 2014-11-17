@@ -2874,6 +2874,13 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives lapdance to @" + room[userR].username + "");
 }
 
+if(data.message.indexOf('!strip') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Strips for @" + room[userR].username + "");
+}
+
 if(data.message.indexOf('!grab') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Grabbing this song, "+ data.un +" :star:");
