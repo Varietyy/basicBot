@@ -2471,7 +2471,7 @@
  
                         functionality: function(chat, cmd){
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                                if( !esBot.commands.executable(this.rank, chat) ) return void (0);
+                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
                                     var msg = chat.message;
      
@@ -2482,7 +2482,7 @@
                                     }
                                     else{
                                         var name = msg.substring(space + 2);
-                                        var user = esBot.userUtilities.lookupUserName(name);
+                                        var user = basicBot.userUtilities.lookupUserName(name);
                                         if (user === false || !user.inRoom) {
                                           return API.sendChat("Doesn't see '" + name + "' in room and slaps the air.");
                                         }
