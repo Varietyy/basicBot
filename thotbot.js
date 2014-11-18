@@ -169,7 +169,7 @@
         status: false,
         name: "Thot Bot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Varietyy/basicBot/master/Shmurdabot.js",
+        scriptLink: "https://rawgit.com/Varietyy/basicBot/master/thotbot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
         chat: null,
