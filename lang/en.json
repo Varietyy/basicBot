@@ -37,7 +37,7 @@
 
 "isopen": "Roulette open! Type !join to participate!",
 
-"winnerpicked": "Winner winner, chicken dinner! @%%NAME%% to position %%POSITION%%.",
+"winnerpicked": "Winner! :trophy: @%%NAME%% to position %%POSITION%%.",
 
 
 
@@ -183,7 +183,7 @@
 
 "starterhelp": "This image will get you started on plug: %%LINK%%",
 
-"roulettejoin": "@%%NAME%% joined the roulette! (!leave if you regret it.)",
+"roulettejoin": "@%%NAME%% joined the roulette!",
 
 "jointime": "[@%%NAMEFROM%%] @%%USERNAME%% has been in the room for %%TIME%%.",
 
@@ -227,7 +227,7 @@
 
 "pong": "Pong!",
 
-"reload": ":warning: Bot reloading... :warning:",
+"reload": "/me bot reloading...",
 
 "removenotinwl": "[@%%NAME%%] Specified user @%%USERNAME%% is not in the waitlist.",
 
