@@ -2450,53 +2450,6 @@
                     }
                 }
             },
-            
-            slapCommand: {
-                        rank: 'user',
-                        type: 'startsWith',
- 
-                        slaps: ['slaps you with a tuna!',
-                                   'doubleslaps you!',
-                                   'tries to slap you but fails and falls on their ass!',
-                                   'slaps the shit out of you!',
-                                   'misses and slaps him/herself!',
-                                   "slaps you so hard your face turns purple!",
-                                   'back hands you like a bitch!'
-                            ],
- 
-                        getSlap: function() {
-                            var c = Math.floor(Math.random() * this.slaps.length);
-                            return this.slaps[c];
-                        },
- 
-                        functionality: function(chat, cmd){
-                                if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
-                                else{
-                                    var msg = chat.message;
-     
-                                    var space = msg.indexOf(' ');
-                                    if(space === -1){
-                                        API.sendChat('/em But who?!');
-                                        return false;
-                                    }
-                                    else{
-                                        var name = msg.substring(space + 2);
-                                        var user = basicBot.userUtilities.lookupUserName(name);
-                                        if (user === false || !user.inRoom) {
-                                          return API.sendChat("Doesn't see '" + name + "' in room and slaps the air.");
-                                        }
-                                        else if(user.username === chat.from){
-                                            return API.sendChat("@" + name +  ", you want to get slapped? No kinky stuff please.");
-                                        }
-                                        else {
-                                            return API.sendChat("/me @" + user.username + ", @" + chat.from + ' ' + this.getSlap() );
-                                        }
-                                    }
-                               
-                                };                              
-                        },
-                },  
 
             sourceCommand: {
                 command: 'source',
