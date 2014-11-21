@@ -1178,7 +1178,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            API.sendChat("/me is running!");
+            API.sendChat("/me bot online!");
         },
         commands: {
             executable: function (minRank, chat) {
