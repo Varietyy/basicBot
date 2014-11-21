@@ -69,7 +69,7 @@
 
 "warning2": "@%%NAME%%, last warning!",
 
-"afkremove": "@%%NAME%%, get up out my traphouse! You were at position %%POSITION%%.",
+"afkremove": "%%NAME%% removed for AFK. Position: %%POSITION%%.",
 
 
 
@@ -83,7 +83,7 @@
 
 "roomadvertising": "@%%NAME%%, don't post links to other rooms please.",
 
-"adfly": "@%%NAME%%, please change your autowoot program. We suggest PlugCubed: http://plugcubed.net/",
+"adfly": "@%%NAME%%, please change your autowoot program. We suggest nWOOT: https://nbot.eu/Installation.nwoot",
 
 
 
