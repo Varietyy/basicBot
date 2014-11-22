@@ -1531,10 +1531,10 @@
             },
             
             slapCommand: {
-                command: ['slap','slapss'],
+                command: ['slap','slaps'],
                 rank: 'user',
                 type: 'startsWith',
-                alcohols: ['slaps the fuck out of you!',
+                slaps: ['slaps the fuck out of you!',
                     'tried to slap you but misses and slaps themselves!',
                     'acts like they\'re going to slap you but runs away like a bitch!,
                     'double slaps you!',
