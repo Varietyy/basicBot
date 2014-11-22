@@ -1536,7 +1536,7 @@
                 type: 'startsWith',
                 slaps: ['slaps the fuck out of you!',
                     'tried to slap you but misses and slaps themselves!',
-                    'acts like they\'re going to slap you but runs away like a bitch!,
+                    'acts like they are going to slap you but runs away like a bitch!,
                     'double slaps you!',
                     'backhands the shit out of you!',
                     'slaps you like a bitch!',
