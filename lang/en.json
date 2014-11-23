@@ -161,14 +161,6 @@
 
 "commandslink": "%%BOTNAME%% commands: %%LINK%%",
 
-"eatslap": "Don't make me slap anyone or I'll slap you!",
-   
-"nouserslap": "/me doesn't see anyone to slap, so slaps the air and looks stupid.",
-    
-"selfslap": " @%%NAME%% ' slap's the shit out of yourself trying to slap someone else.",
-    
-"slap": "/me @%%NAMETO%%, @%%NAMEFROM%% %%SLAP%%",
-
 "eatcookie": "eats a cookie.",
 
 "nousercookie": "/em doesn't see %%NAME%% in room and eats a cookie himself.",
