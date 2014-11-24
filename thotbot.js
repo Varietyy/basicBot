@@ -2939,7 +2939,10 @@ API.sendChat("Gives head to @" + room[userR].username + ".");
 }
 });
 
-var outcome = [" slaps the fuck out of you", " bitch slaps you", " slaps at you but misses and slaps him/herself", " backhands you and makes you cry", " goes to slap you but runs away like a bitch"];
+API.on(API.CHAT, function(data){
+    
+var slapArray = [" slaps the fuck out of you", " bitch slaps you", " slaps at you but misses and slaps him/herself", " backhands you and makes you cry", " goes to slap you but runs away like a bitch"];];
+var outcome = [" you gonna allow that?"];
  
 //you need your way to identify when someone types !cookie. **THAT METHOD IS NOT SHOWN**
                 if(data.message.indexOf('!slap') === 0){
@@ -2948,7 +2951,7 @@ var outcome = [" slaps the fuck out of you", " bitch slaps you", " slaps at you 
                 var cookieR = Math.floor(Math.random() * slapArray.length);
                 var userR = Math.floor(Math.random() * room.length);
                 var outcomeR = Math.floor(Math.random() * outcome.length);
-                API.sendChat("@" + room[userR].username + ", " + data.from + " " + outcome[outcomeR] + "!");
+                API.sendChat("@" + room[userR].username + ", " + data.from + "" + cookieArray[cookieR] + ", " + outcome[outcomeR]);
         }
  
 API.on(API.USER_JOIN, function(user){
