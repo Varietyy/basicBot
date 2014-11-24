@@ -2947,6 +2947,7 @@ var outcome = ["you gonna allow that?"];
                 var outcomeR = Math.floor(Math.random() * outcome.length);
                 API.sendChat("@" + room[userR].username + ", " + data.from + "" + cookieArray[cookieR] + ", " + outcome[outcomeR]);
         }
+});
  
 API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
