@@ -2904,7 +2904,7 @@ API.sendChat("Twerks on @" + room[userR].username + ".");
 
 API.on(API.CHAT, function(data){
 
-if(data.message.indexOf('!twerk') === 0){
+if(data.message.indexOf('!ambercole') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
