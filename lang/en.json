@@ -169,6 +169,14 @@
 
 "cookie": "@%%NAMETO%%, @%%NAMEFROM%% %%COOKIE%%",
 
+"eatslap": "slaps myself.",
+
+"nouserslap": "/em doesn't see %%NAME%% in room and slaps the air.",
+
+"selfslap": "@%%NAME%%, why you slapping yourself?",
+
+"slap": "@%%NAMETO%%, @%%NAMEFROM%% %%SLAP%%",
+
 "cycleguardtime": "[@%%NAME%%] The cycleguard is set to %%TIME%% minute(s).",
 
 "dclookuprank": "[@%%NAME%%] Only bouncers and above can do a lookup for others.",
