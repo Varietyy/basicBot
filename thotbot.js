@@ -1531,14 +1531,29 @@
             },
 
             cookieCommand: {
-                command: 'slap',
+                command: 'cookie',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['slaps the shit out of you!',
-                    'goes to slap you but misses and slaps themselves!',
-                    'backhands the fuck outta you!',
-                    'bitch slaps you!',
-                    'slaps you with a dead fish!'
+                cookies: ['has given you a chocolate chip cookie!',
+-                    'has given you a soft homemade oatmeal cookie!',
+-                    'has given you a plain, dry, old cookie. It was the last one in the bag. Gross.',
+-                    'gives you a sugar cookie. What, no frosting and sprinkles? 0/10 would not touch.',
+-                    'gives you a chocolate chip cookie. Oh wait, those are raisins. Bleck!',
+-                    'gives you an enormous cookie. Poking it gives you more cookies. Weird.',
+-                    'gives you a fortune cookie. It reads "Why aren\'t you working on any projects?"',
+-                    'gives you a fortune cookie. It reads "Give that special someone a compliment"',
+-                    'gives you a fortune cookie. It reads "Take a risk!"',
+-                    'gives you a fortune cookie. It reads "Go outside."',
+-                    'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
+-                    'gives you a fortune cookie. It reads "Do you even lift?"',
+-                    'gives you a fortune cookie. It reads "m808 pls"',
+-                    'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
+-                    'gives you a fortune cookie. It reads "I love you."',
+-                    'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
+-                    'gives you an Oreo cookie with a glass of milk!',
+-                    'gives you a rainbow cookie made with love :heart:',
+-                    'gives you an old cookie that was left out in the rain, it\'s moldy.',
+-                    'bakes you fresh cookies, it smells amazing.'
                 ],
                 getCookie: function () {
                     var c = Math.floor(Math.random() * this.cookies.length);
@@ -1572,48 +1587,6 @@
                 }
             },
 
-slapCommand: {
-                command: 'slap',
-                rank: 'user',
-                type: 'startsWith',
-                cookies: ['slaps the shit out of you!',
-                    'goes to slap you but misses and slaps themselves!',
-                    'backhands the fuck outta you!',
-                    'bitch slaps you!',
-                    'slaps you with a dead fish!'
-                ],
-                getSlap: function () {
-                    var c = Math.floor(Math.random() * this.cookies.length);
-                    return this.cookies[c];
-                },
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var msg = chat.message;
-
-                        var space = msg.indexOf(' ');
-                        if (space === -1) {
-                            API.sendChat(basicBot.chat.eatslap);
-                            return false;
-                        }
-                        else {
-                            var name = msg.substring(space + 2);
-                            var user = basicBot.userUtilities.lookupUserName(name);
-                            if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nouserslap, {name: name}));
-                            }
-                            else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfslap, {name: name}));
-                            }
-                            else {
-                                return API.sendChat(subChat(basicBot.chat.slap, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
-                            }
-                        }
-                    }
-                }
-            },
-            
             cycleCommand: {
                 command: 'cycle',
                 rank: 'manager',
@@ -2965,11 +2938,23 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives head to @" + room[userR].username + ".");
 }
 });
+
+var outcome = [" slaps the fuck out of you", " bitch slaps you", " slaps at you but misses and slaps him/herself", " backhands you and makes you cry", " goes to slap you but runs away like a bitch"];
+ 
+//you need your way to identify when someone types !cookie. **THAT METHOD IS NOT SHOWN**
+                if(data.message.indexOf('!slap') === 0){
+                API.moderateDeleteChat(data.chatID);
+                var room = API.getUsers();
+                var cookieR = Math.floor(Math.random() * slapArray.length);
+                var userR = Math.floor(Math.random() * room.length);
+                var outcomeR = Math.floor(Math.random() * outcome.length);
+                API.sendChat("@" + room[userR].username + ", " + data.from + " " + outcome[outcomeR] + "!");
+        }
  
 API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
     {
-       setTimeout(function(){API.sendChat("King Variety joined!");}, 6000);
+       setTimeout(function(){API.sendChat("King Variety has arrived!");}, 6000);
     }
 });
 
@@ -2980,3 +2965,5 @@ API.on(API.DJ_ADVANCE, function(user){
     }
 });
 }).call(this);
+
+
