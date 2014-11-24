@@ -2903,6 +2903,16 @@ API.sendChat("Twerks on @" + room[userR].username + ".");
 });
 
 API.on(API.CHAT, function(data){
+
+if(data.message.indexOf('!twerk') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("@" + room[userR].username + " sucks dick behind the school wearing Sketchers.");
+}
+});
+
+API.on(API.CHAT, function(data){
     
 if(data.message.indexOf('!lapdance') === 0){
 API.moderateDeleteChat(data.cid);
@@ -2928,7 +2938,7 @@ if(data.message.indexOf('!head') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("Gives head to @" + room[userR].username + ".");
+API.sendChat("@"+ data.un +" Gives head to @" + room[userR].username + ".");
 }
 });
  
