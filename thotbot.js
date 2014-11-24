@@ -2940,7 +2940,7 @@ var outcome = ["you gonna allow that?"];
 //you need your way to identify when someone types !cookie. **THAT METHOD IS NOT SHOWN**
 
                 if(data.message.indexOf('!slap') === 0){
-                API.moderateDeleteChat(data.chatID);
+                API.moderateDeleteChat(data.cid);
                 var room = API.getUsers();
                 var cookieR = Math.floor(Math.random() * slapArray.length);
                 var userR = Math.floor(Math.random() * room.length);
