@@ -2908,7 +2908,7 @@ if(data.message.indexOf('!ambercole') === 0){
 API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
-API.sendChat("@" + room[userR].username + " sucks dick behind the school wearing Sketchers.");
+API.sendChat("@"+ room[userR].username +" sucks dick behind the school wearing Sketchers.");
 }
 });
 
