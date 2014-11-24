@@ -2941,7 +2941,7 @@ API.sendChat("Gives head to @" + room[userR].username + ".");
 
 API.on(API.CHAT, function(data){
     
-var slapArray = [" slaps the fuck out of you", " bitch slaps you", " slaps at you but misses and slaps him/herself", " backhands you and makes you cry", " goes to slap you but runs away like a bitch"];];
+var slapArray = [" slaps the fuck out of you", " bitch slaps you", " slaps at you but misses and slaps him/herself", " backhands you and makes you cry", " goes to slap you but runs away like a bitch"];
 var outcome = [" you gonna allow that?"];
  
 //you need your way to identify when someone types !cookie. **THAT METHOD IS NOT SHOWN**
