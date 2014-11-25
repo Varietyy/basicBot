@@ -2870,17 +2870,17 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 }
 });
 
-/*(function(){
+(function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
                         skipping = true;
                         API.once(API.DJ_ADVANCE,function(){skipping = false;});
-                        API.sendChat("@"+ API.getDJ().username +" too many meh\'s. :thumbsdown:");
+                        API.sendChat("@"+ API.getDJ().username +" 8/8 meh\'s. :thumbsdown:");
                         API.moderateForceSkip();
                 }
         });
-})();*/
+})();
 
 API.on(API.CHAT, function(data){
  
