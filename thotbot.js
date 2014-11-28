@@ -174,7 +174,7 @@
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 60,
             afkRemoval: true,
-            maximumDc: 300,
+            maximumDc: 2,
             bouncerPlus: true,
             lockdownEnabled: false,
             lockGuard: false,
@@ -204,7 +204,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: false,
-            opLink: null,
+            opLink: "http://goo.gl/tpBTAo",
             rulesLink: null,
             themeLink: null,
             fbLink: null,
@@ -2912,6 +2912,11 @@ API.sendChat("@"+ room[userR].username +" sucks dick behind the school wearing S
 }
 });
 
+if(data.message.indexOf('!sketchers') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("["+ data.un +"] Sketchers are a popular shoeware company which is known for servicing young thots in apparel to suck dick.");
+}
+
 API.on(API.CHAT, function(data){
     
 if(data.message.indexOf('!lapdance') === 0){
@@ -2921,6 +2926,11 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives lap dance to @" + room[userR].username + ".");
 }
 });
+
+if(data.message.indexOf('!thotlevel') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat(""+ data.un +"'s thot level is over 9000!");
+}
 
 API.on(API.CHAT, function(data){
     
@@ -2939,6 +2949,16 @@ API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat("@"+ data.un +" Gives head to @" + room[userR].username + ".");
+}
+});
+
+API.on(API.CHAT, function(data){
+    
+if(data.message.indexOf('!grapefruit') === 0){
+API.moderateDeleteChat(data.cid);
+var room = API.getUsers();
+var userR = Math.floor(Math.random() * room.length);
+API.sendChat("Gives grapefruit technique to @" + room[userR].username + ".");
 }
 });
  
