@@ -154,7 +154,7 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui Modified by Variety";
+    var botCreator = "Yemasthui. Highly modified by Chase aka Variety.";
     var botCreatorIDs = [];
 
     var basicBot = {
@@ -2905,9 +2905,9 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
     var players = [], roulette = false;
     API.on(API.CHAT,function(a){
         var msg = a.message.toLowerCase();
-        if (!msg.indexOf('!roulette') && !roulette && API.hasPermission(a.fid,2)) {
+        if (!msg.indexOf('!roulette') && !roulette && API.hasPermission(a.fid,3)) {
             roulette = true;
-            API.sendChat('/me Roulette is starting! Type !join or !play to join! :phantomspinthat:');
+            API.sendChat('/me Roulette is starting! Type !join or !play to join!');
             setTimeout(function(){
                 if (!players.length) return API.sendChat('/me Nobody joined the Roulette!');
                 var winner = players[Math.floor(Math.random()*players.length)];
