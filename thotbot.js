@@ -2249,7 +2249,7 @@
             },
 
             opCommand: {
-                command: 'op',
+                command: 'oplist',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
