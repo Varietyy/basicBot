@@ -2856,10 +2856,20 @@ if(data.message.indexOf('!tits') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] ( . Y . )");
 }
+
+if(data.message.indexOf('!thotlevel') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat(""+ data.un +"'s thot level is over 9000!");
+}
  
 if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("Variety is the shit!");
+}
+
+if(data.message.indexOf('!sketchers') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("["+ data.un +"] Sketchers are a popular shoeware company which is known for servicing young thots in apparel to suck dick.");
 }
 
 if(data.message.indexOf('!grab') === 0){
@@ -2921,12 +2931,6 @@ API.sendChat("@"+ room[userR].username +" sucks dick behind the school wearing S
 }
 });
 
-if(data.message.indexOf('!sketchers') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("["+ data.un +"] Sketchers are a popular shoeware company which is known for servicing young thots in apparel to suck dick.");
-}
-});
-
 API.on(API.CHAT, function(data){
     
 if(data.message.indexOf('!lapdance') === 0){
@@ -2934,12 +2938,6 @@ API.moderateDeleteChat(data.cid);
 var room = API.getUsers();
 var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives lap dance to @" + room[userR].username + ".");
-}
-});
-
-if(data.message.indexOf('!thotlevel') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat(""+ data.un +"'s thot level is over 9000!");
 }
 });
 
