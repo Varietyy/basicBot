@@ -204,7 +204,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: false,
-            opLink: "http://goo.gl/tpBTAo",
+            opLink: null,
             rulesLink: null,
             themeLink: null,
             fbLink: null,
