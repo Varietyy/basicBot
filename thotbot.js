@@ -266,7 +266,7 @@
             },
             newBlacklisted: [],
             newBlacklistedSongFunction: null,
-            /*roulette: {
+            roulette: {
                 rouletteStatus: false,
                 participants: [],
                 countdown: null,
@@ -291,7 +291,7 @@
                     }, 1 * 1000, winner, pos);
                 }
             }
-        },*/
+        },
         User: function (id, name) {
             this.id = id;
             this.username = name;
@@ -2363,8 +2363,8 @@
                 }
             },
 
-            /*rouletteCommand: {
-                command: 'roulette',
+            rouletteCommand: {
+                command: 'roul',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2376,7 +2376,7 @@
                         }
                     }
                 }
-            },*/
+            },
 
             rulesCommand: {
                 command: 'rules',
