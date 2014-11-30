@@ -266,7 +266,7 @@
             },
             newBlacklisted: [],
             newBlacklistedSongFunction: null,
-            roulette: {
+            /*roulette: {
                 rouletteStatus: false,
                 participants: [],
                 countdown: null,
@@ -291,7 +291,7 @@
                     }, 1 * 1000, winner, pos);
                 }
             }
-        },
+        },*/
         User: function (id, name) {
             this.id = id;
             this.username = name;
@@ -2363,7 +2363,7 @@
                 }
             },
 
-            rouletteCommand: {
+            /*rouletteCommand: {
                 command: 'roulette',
                 rank: 'mod',
                 type: 'exact',
@@ -2376,7 +2376,7 @@
                         }
                     }
                 }
-            },
+            },*/
 
             rulesCommand: {
                 command: 'rules',
@@ -2970,6 +2970,29 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives grapefruit technique to @" + room[userR].username + ".");
 }
 });
+
+(function(){
+    var players = [], roulette = false;
+    API.on(API.CHAT,function(a){
+        var msg = a.message.toLowerCase();
+        if (!msg.indexOf('!roulette') && !roulette && API.hasPermission(a.fid,2)) {
+            roulette = true;
+            API.sendChat('/me Roulette is starting! Type !join/!play to join! :phantomspinthat:');
+            setTimeout(function(){
+                if (!players.length) return API.sendChat('/me Nobody joined the Roulette!');
+                var winner = players[Math.floor(Math.random()*players.length)];
+                API.sendChat('Winnder! @' + API.getUser(winner).username + ' :trophy:');
+                API.moderateMoveDJ(winner,2);
+                players = [];
+                roulette = false;
+            },6E4);
+        }
+        else if ((!msg.indexOf('!join') || !msg.indexOf('!play')) && roulette && players.indexOf(a.fid) == -1 && API.getWaitListPosition(a.fid) != -1) {
+            players.push(a.fid);
+        }
+        if (!msg.indexOf('!join') || !msg.indexOf('!play') || !msg.indexOf('!roulette')) API.moderateDeleteChat(a.cid);
+    });
+})();
  
 API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
