@@ -2841,6 +2841,11 @@ if(data.message.indexOf('!beer') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Cheers! :beers:");
 }
+
+if(data.message.indexOf('!op') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("@"+ data.un +" OP List: http://goo.gl/tpBTAo");
+}
  
 if(data.message.indexOf('!burger') === 0){
 API.moderateDeleteChat(data.cid);
@@ -2935,12 +2940,6 @@ API.sendChat("Gives lap dance to @" + room[userR].username + ".");
 if(data.message.indexOf('!thotlevel') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat(""+ data.un +"'s thot level is over 9000!");
-}
-});
-
-if(data.message.indexOf('!op') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +" OP List: http://goo.gl/tpBTAo");
 }
 });
 
