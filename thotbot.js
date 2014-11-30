@@ -2364,7 +2364,7 @@
             },
 
             rouletteCommand: {
-                command: 'roul',
+                command: 'roulette',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2899,29 +2899,6 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
                         API.moderateForceSkip();
                 }
         });
-})();
-
-(function(){
-    var players = [], roulette = false;
-    API.on(API.CHAT,function(a){
-        var msg = a.message.toLowerCase();
-        if (!msg.indexOf('!roulette') && !roulette && API.hasPermission(a.fid,3)) {
-            roulette = true;
-            API.sendChat('/me Roulette is starting! Type !join or !play to join!');
-            setTimeout(function(){
-                if (!players.length) return API.sendChat('/me Nobody joined the Roulette!');
-                var winner = players[Math.floor(Math.random()*players.length)];
-                API.sendChat('Winnder! @' + API.getUser(winner).username + ' :trophy:');
-                API.moderateMoveDJ(winner,2);
-                players = [];
-                roulette = false;
-            },6E4);
-        }
-        else if ((!msg.indexOf('!join') || !msg.indexOf('!play')) && roulette && players.indexOf(a.fid) == -1 && API.getWaitListPosition(a.fid) != -1) {
-            players.push(a.fid);
-        }
-        if (!msg.indexOf('!join') || !msg.indexOf('!play') || !msg.indexOf('!roulette')) API.moderateDeleteChat(a.cid);
-    });
 })();
 
 API.on(API.CHAT, function(data){
