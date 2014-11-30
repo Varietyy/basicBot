@@ -2936,6 +2936,10 @@ API.moderateDeleteChat(data.cid);
 API.sendChat(""+ data.un +"'s thot level is over 9000!");
 }
 
+if(data.message.indexOf('!op') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("@"+ data.un +" OP List: http://goo.gl/tpBTAo");
+}
 API.on(API.CHAT, function(data){
     
 if(data.message.indexOf('!strip') === 0){
