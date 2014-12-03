@@ -2970,42 +2970,6 @@ var userR = Math.floor(Math.random() * room.length);
 API.sendChat("Gives grapefruit technique to @" + room[userR].username + ".");
 }
 });
-
-API.on(API.DJ_ADVANCE, function(){
-	
-(function () {
-		// skip if the song is unavailable
-		if(document.getElementById('dialog-restricted-media')){
-			API.sendChat('@'+API.getDJ().username+' that song is unavailable. Please pick a new one.');
-			if($('.cycle-toggle').hasClass('disabled')){
-				$('.cycle-toggle').click();
-			}
-			var z = API.getDJ().id;
-			API.moderateForceSkip();
-			if($('.cycle-toggle').hasClass('enabled')){
-				$('.cycle-toggle').click();
-			}
-			if(API.getWaitList().length > 5){
-				API.moderateMoveDJ(z, 5);
-			}
-		}
-
-		if(a.media.author === 'Eminem'){
-			API.sendChat('@'+API.getDJ().username+', you are going to make @HeatRockk mad for playing Eminem :/');
-			return API.moderateForceSkip();
-		}
-		if(histSkp){
-			var z = API.getHistory();
-			for(var i in z){
-				if(a.media !== undefined && z[i].title === a.media.title){
-					API.sendChat('@'+API.getDJ().username+', that song is on the history!');
-					settings.gqueue.push(API.getDJ().id);
-					API.moderateLockWaitList(true, false);
-					API.moderateForceSkip();
-					if(API.getWaitList().length > 49){
-				}
-			}
-		}
  
 API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
