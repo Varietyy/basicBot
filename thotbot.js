@@ -2972,8 +2972,8 @@ API.sendChat("Gives grapefruit technique to @" + room[userR].username + ".");
 });
 
 API.on(API.DJ_ADVANCE, function(){
-
-function eventAdvance(a){
+	
+(function () {
 		// skip if the song is unavailable
 		if(document.getElementById('dialog-restricted-media')){
 			API.sendChat('@'+API.getDJ().username+' that song is unavailable. Please pick a new one.');
@@ -2989,6 +2989,7 @@ function eventAdvance(a){
 				API.moderateMoveDJ(z, 5);
 			}
 		}
+
 		if(a.media.author === 'Eminem'){
 			API.sendChat('@'+API.getDJ().username+', you are going to make @HeatRockk mad for playing Eminem :/');
 			return API.moderateForceSkip();
