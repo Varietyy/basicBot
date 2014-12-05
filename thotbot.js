@@ -174,7 +174,7 @@
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 60,
             afkRemoval: true,
-            maximumDc: 2,
+            maximumDc: 120,
             bouncerPlus: true,
             lockdownEnabled: false,
             lockGuard: false,
