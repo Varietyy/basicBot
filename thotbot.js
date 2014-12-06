@@ -2894,16 +2894,6 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 }
 });
 
-/*API.on(API.CHAT, function(data){
-    
-if(data.message.indexOf('!slap') === 0){
-API.moderateDeleteChat(data.cid);
-var a = API.getUsers();
-for(var i in a){
-if(a[i].username === data.message.substr(10)){
-API.sendChat('@' + data.message.substr(10) + ', ' + data.from + ' bitch slapped you!');
-}*/
-
 (function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
