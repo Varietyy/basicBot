@@ -2864,12 +2864,12 @@ API.sendChat(""+ data.un +"'s thot level is over 9000!");
 
 if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("Chase/Variety is the shit!");
+API.sendChat("@"+ data.un +", Chase/Variety is the shit!");
 }
 
 if(data.message.indexOf('!shelby') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("Shelby/sheebeexo is the shit!");
+API.sendChat("@"+ data.un +", Shelby/sheebeexo is the shit!");
 }
 
 if(data.message.indexOf('!sketchers') === 0){
