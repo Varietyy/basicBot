@@ -2861,10 +2861,22 @@ if(data.message.indexOf('!thotlevel') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat(""+ data.un +"'s thot level is over 9000!");
 }
+
+if(data.message.indexOf('!slap') !=-1){
+                if(API.getUser(data.fromID).permission >= 2){
+                        var a = API.getUsers();
+                        for(var i in a){
+                                if(a[i].username === data.message.substr(10)){
+                                        API.sendChat('/em @' + data.message.substr(10) + ', ' + data.from + ' bitch slapped you!');
  
 if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("Variety is the shit!");
+API.sendChat("Chase/Variety is the shit!");
+}
+
+if(data.message.indexOf('!shelby') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("Shelby/sheebeexo is the shit!");
 }
 
 if(data.message.indexOf('!sketchers') === 0){
