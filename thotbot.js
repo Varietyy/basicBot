@@ -2894,6 +2894,8 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 }
 });
 
+API.on(API.CHAT, function(data){
+    
 if(data.message.indexOf('!slap') === 0){
 var a = API.getUsers();
 for(var i in a){
