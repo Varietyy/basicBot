@@ -2902,7 +2902,6 @@ for(var i in a){
 if(a[i].username === data.message.substr(10)){
 API.sendChat('@' + data.message.substr(10) + ', ' + data.from + ' bitch slapped you!');
 }
-});
 
 (function(){
         var skipping = false, skipThreshold = 8;
