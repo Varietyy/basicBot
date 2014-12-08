@@ -235,7 +235,7 @@
 
 "sessionstats": "[@%%NAME%%] Total Woots: %%WOOTS%%, Total Mehs: %%MEHS%%, Total Grabs: %%GRABS%%.",
 
-"skip": "[%%NAME%% used skip.]",
+"skip": "[%%NAME%% skipped this shitty song!]",
 
 "madeby": "This bot was made by %%NAME%%.",
 
