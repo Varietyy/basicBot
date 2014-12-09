@@ -2976,12 +2976,12 @@ API.sendChat("Gives grapefruit technique to @" + room[userR].username + ".");
 }
 });
  
-API.on(API.USER_JOIN, function(user){
+/*API.on(API.USER_JOIN, function(user){
     if(user.id == "3741010")
     {
        setTimeout(function(){API.sendChat("King Variety has arrived!");}, 6000);
     }
-});
+});*/
 
 API.on(API.DJ_ADVANCE, function(user){
     if(user.id == "3741010")
