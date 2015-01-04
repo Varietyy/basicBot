@@ -2872,6 +2872,16 @@ API.moderateDeleteChat(data.cid);
 API.sendChat("@"+ data.un +", Shelby/sheebeexo is the shit!");
 }
 
+if(data.message.indexOf('!sam') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("@"+ data.un +", Sam is a master chef!");
+}
+
+if(data.message.indexOf('!mikey') === 0){
+API.moderateDeleteChat(data.cid);
+API.sendChat("@"+ data.un +", Mikey is Batman!!!");
+}
+
 if(data.message.indexOf('!sketchers') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Sketchers are a popular shoeware company which is known for servicing young thots in apparel to suck dick.");
