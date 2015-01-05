@@ -154,7 +154,7 @@
         return m;
     };
 
-    var botCreator = "Yemasthui. Highly modified by Chase aka Variety.";
+    var botCreator = "Yemasthui. Highly modified by Chase aka Variety";
     var botCreatorIDs = [];
 
     var basicBot = {
@@ -2862,9 +2862,9 @@ API.moderateDeleteChat(data.cid);
 API.sendChat(""+ data.un +"'s thot level is over 9000!");
 }
 
-if(data.message.indexOf('!chase') === 0){
+if(data.message.indexOf('!variety') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +", Chase/Variety runs shit!");
+API.sendChat("@"+ data.un +", Chase runs shit!");
 }
 
 if(data.message.indexOf('!shelby') === 0){
