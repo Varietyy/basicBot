@@ -160,7 +160,7 @@
     var basicBot = {
         version: "2.1.3",
         status: false,
-        name: "Thot Bot",
+        name: "Tupac",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/thotbot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -169,7 +169,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "Thot Bot",
+            botName: "Tupac",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             maximumAfk: 60,
