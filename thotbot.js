@@ -2862,19 +2862,19 @@ API.moderateDeleteChat(data.cid);
 API.sendChat(""+ data.un +"'s thot level is over 9000!");
 }
 
-if(data.message.indexOf('!variety') === 0){
+if(data.message.indexOf('!chase') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +", Chase/Variety is the shit!");
+API.sendChat("@"+ data.un +", Chase/Variety runs shit!");
 }
 
 if(data.message.indexOf('!shelby') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +", Shelby/sheebeexo is the shit!");
+API.sendChat("@"+ data.un +", Shelby don't get tired!");
 }
 
 if(data.message.indexOf('!sam') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +", Sam is a master chef!");
+API.sendChat("@"+ data.un +", Sam should be on Master Chef with his cooking skills!");
 }
 
 if(data.message.indexOf('!mikey') === 0){
