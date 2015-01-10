@@ -1,4 +1,24 @@
+/**
+ *Copyright 2014 Yemasthui
+ *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
+ *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
+ */
+
+
 (function () {
+
+    API.getWaitListPosition = function(id){
+        if(typeof id === 'undefined' || id === null){
+            id = API.getUser().id;
+        }
+        var wl = API.getWaitList();
+        for(var i = 0; i < wl.length; i++){
+            if(wl[i].id === id){
+                return i;
+            }
+        }
+        return -1;
+    };
 
     var kill = function () {
         clearInterval(basicBot.room.autodisableInterval);
@@ -34,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -154,11 +174,11 @@
         return m;
     };
 
-    var botCreator = "Yemasthui. Highly modified by Chase aka Variety";
+    var botCreator = "Matthew aka. Yemasthui";
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.3",
+        version: "2.1.4",
         status: false,
         name: "Tupac",
         loggedInID: null,
@@ -168,6 +188,7 @@
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
+        retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "Tupac",
             language: "english",
@@ -181,6 +202,8 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
+            voteSkip: true,
+            voteSkipLimit: 8,
             timeGuard: true,
             maximumSongLength: 8,
             autodisable: false,
@@ -203,7 +226,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: false,
+            welcome: true,
             opLink: null,
             rulesLink: null,
             themeLink: null,
@@ -212,7 +235,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -231,12 +254,12 @@
             autoskip: false,
             autoskipTimer: null,
             autodisableInterval: null,
-            /*autodisableFunc: function () {
+            autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
                     API.sendChat('!afkdisable');
                     API.sendChat('!joindisable');
                 }
-            },*/
+            },
             queueing: 0,
             queueable: true,
             currentDJID: null,
@@ -282,7 +305,7 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    var pos = 2;
+                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
@@ -770,6 +793,18 @@
                     }
                 }
             }
+
+            var mehs = API.getScore().negative;
+            var woots = API.getScore().positive;
+            var dj = API.getDJ();
+
+            if (basicBot.settings.voteSkip) {
+                if ((mehs - woots) >= (basicBot.settings.voteSkipLimit)) {
+                    API.sendChat(subChat(basicBot.chat.voteskipexceededlimit, {name: dj.username, limit: basicBot.settings.voteSkipLimit}));
+                    API.moderateForceSkip();
+                }
+            }
+
         },
         eventCurateupdate: function (obj) {
             for (var i = 0; i < basicBot.room.users.length; i++) {
@@ -1050,7 +1085,7 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'interesting', 'very interesting', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
+                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
                 'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
@@ -1171,7 +1206,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            API.sendChat("/me bot online!");
+            loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
             executable: function (minRank, chat) {
@@ -1428,7 +1463,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
-                        API.moderateBanUser(user.id, 1, API.BAN.PERMA);
+                        API.moderateBanUser(user.id, 1, API.BAN.DAY);
                     }
                 }
             },
@@ -1539,11 +1574,7 @@
                     'gives you a fortune cookie. It reads "Go outside."',
                     'gives you a fortune cookie. It reads "Don\'t forget to eat your veggies!"',
                     'gives you a fortune cookie. It reads "Do you even lift?"',
-                    'gives you a brownie with bud in it :)',
-                    'gives you a fortune cookie. It reads "Go fuck yourself."',
-                    'gives you a fortune cookie. It reads "Come at me, bro!"',
-                    'gives you a fortune cookie. It reads "GTFO!"',
-                    'gives you a fortune cookie. It reads "Suck a dick."',
+                    'gives you a fortune cookie. It reads "m808 pls"',
                     'gives you a fortune cookie. It reads "If you move your hips, you\'ll get all the ladies."',
                     'gives you a fortune cookie. It reads "I love you."',
                     'gives you a Golden Cookie. You can\'t eat it because it is made of gold. Dammit.',
@@ -1634,6 +1665,49 @@
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
 
+                    }
+                }
+            },
+
+            voteskipCommand: {
+                command: 'voteskip',
+                rank: 'manager',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.voteskiplimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
+                        var argument = msg.substring(cmd.length + 1);
+                        if (!basicBot.settings.voteSkip) basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
+                        if (isNaN(argument)) {
+                            API.sendChat(subChat(basicBot.chat.voteskipinvalidlimit, {name: chat.un}));
+                        }
+                        else {
+                            basicBot.settings.voteSkipLimit = argument;
+                            API.sendChat(subChat(basicBot.chat.voteskipsetlimit, {name: chat.un, limit: basicBot.settings.voteSkipLimit}));
+                        }
+                    }
+                }
+            },
+
+            togglevoteskipCommand: {
+                command: 'togglevoteskip',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.voteSkip) {
+                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
+                            API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.voteskip}));
+                        }
+                        else {
+                            basicBot.settings.motdEnabled = !basicBot.settings.motdEnabled;
+                            API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.voteskip}));
+                        }
                     }
                 }
             },
@@ -2249,7 +2323,7 @@
             },
 
             opCommand: {
-                command: 'oplist',
+                command: 'op',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2501,6 +2575,11 @@
 
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+
+                        msg += basicBot.chat.voteskip + ': ';
+                        if (Qbot.settings.voteskip) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
 
@@ -2904,7 +2983,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 }
 });
 
-(function(){
+/*(function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
@@ -2914,7 +2993,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
                         API.moderateForceSkip();
                 }
         });
-})();
+})();*/
 
 API.on(API.CHAT, function(data){
  
@@ -2998,7 +3077,4 @@ API.on(API.DJ_ADVANCE, function(user){
     {
        $('#woot').click();
     }
-});
 }).call(this);
-
-
