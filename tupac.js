@@ -167,7 +167,7 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui";
+    var botCreator = "Yemasthui and highly modified by Chase/Variety";
     var botCreatorIDs = [];
 
     var basicBot = {
