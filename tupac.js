@@ -3070,4 +3070,5 @@ API.on(API.DJ_ADVANCE, function(user){
     {
        $('#woot').click();
     }
+});
 }).call(this);
