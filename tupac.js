@@ -2976,7 +2976,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 }
 });
 
-/*(function(){
+(function(){
         var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
@@ -2986,7 +2986,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
                         API.moderateForceSkip();
                 }
         });
-})();*/
+})();
 
 API.on(API.CHAT, function(data){
  
