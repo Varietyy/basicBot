@@ -31,7 +31,7 @@
     "valid": "@%%NAME%% disconnected %%TIME%% ago and should be at position %%POSITION%%.",
 
 
-    "warning1": "@%%NAME%%, you have been afk for %%TIME%%. Chat once every 60 minutes to DJ!",
+    "warning1": "@%%NAME%%, you have been afk for %%TIME%%. Chat once every 60 minutes or I will remove you from the waitlist.",
     "warning2": "@%%NAME%%, final warning!",
     "afkremove": "@%%NAME%%, you have been removed for AFK. Position: %%POSITION%%.",
 
