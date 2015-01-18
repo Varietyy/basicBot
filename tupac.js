@@ -3028,6 +3028,16 @@ API.sendChat("Gives lap dance to @" + room[userR].username + ".");
 }
 });
 
+if(data.message.indexOf('!meh') === 0){
+API.moderateDeleteChat(data.cid);
+}
+});
+
+if(data.message.indexOf('!woot') === 0){
+API.moderateDeleteChat(data.cid);
+}
+});
+
 API.on(API.CHAT, function(data){
     
 if(data.message.indexOf('!strip') === 0){
