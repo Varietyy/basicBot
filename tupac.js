@@ -2913,11 +2913,6 @@ if(data.message.indexOf('!beer') === 0){
 API.moderateDeleteChat(data.cid);
 API.sendChat("["+ data.un +"] Cheers! :beers:");
 }
-
-if(data.message.indexOf('!op') === 0){
-API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +" OP List: http://goo.gl/3dA5o0");
-}
  
 if(data.message.indexOf('!burger') === 0){
 API.moderateDeleteChat(data.cid);
