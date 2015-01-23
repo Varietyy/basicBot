@@ -220,7 +220,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: false,
-            opLink: "http://goo.gl/3dA5o0",
+            opLink: "http://pastebin.com/eW26rqFW",
             rulesLink: null,
             themeLink: null,
             fbLink: null,
