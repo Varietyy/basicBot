@@ -113,7 +113,7 @@
                 API.chatLog(basicBot.chat.datarestored);
             }
         }
-        var json_sett = null;
+        /*var json_sett = null;
         var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
         var ref_bot = "@basicBot=";
@@ -132,7 +132,7 @@
                     }
                 }
             });
-        }
+        }*/
 
     };
 
@@ -167,14 +167,14 @@
         return m;
     };
 
-    var botCreator = "Yemasthui and highly modified by Chase/Variety";
+    var botCreator = "Yemasthui & highly modified by Chase/Variety";
     var botCreatorIDs = [];
 
     var basicBot = {
         version: "2.1.4",
-        status: false,
+        status: true,
         name: "Tupac",
-        loggedInID: null,
+        loggedInID: 5169520,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/tupac.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
@@ -190,17 +190,18 @@
             afkRemoval: true,
             maximumDc: 120,
             bouncerPlus: true,
+            blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
-            maximumLocktime: 10,
+            maximumLocktime: 8,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: true,
-            voteSkipLimit: 8,
+            voteSkip: false,
+            voteSkipLimit: 10,
             timeGuard: true,
             maximumSongLength: 8,
             autodisable: false,
-            commandCooldown: 2,
+            commandCooldown: 5,
             usercommandsEnabled: true,
             lockskipPosition: 3,
             lockskipReasons: [
@@ -212,14 +213,14 @@
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
             ],
-            afkpositionCheck: 15,
-            afkRankCheck: "ambassador",
+            afkpositionCheck: 10,
+            afkRankCheck: "cohost", "host",
             motdEnabled: false,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: false,
+            welcome: true,
             opLink: "http://pastebin.com/eW26rqFW",
             rulesLink: null,
             themeLink: null,
@@ -228,7 +229,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
@@ -807,6 +808,7 @@
             }
         },
         eventDjadvance: function (obj) {
+            $("#woot").click();
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
                 if(basicBot.room.users[i].id === user.id){
@@ -837,9 +839,11 @@
 
             var mid = obj.media.format + ':' + obj.media.cid;
             for (var bl in basicBot.room.blacklists) {
-                if (basicBot.room.blacklists[bl].indexOf(mid) > -1) {
-                    API.sendChat(subChat(basicBot.chat.isblacklisted, {blacklist: bl}));
-                    return API.moderateForceSkip();
+                if (basicBot.settings.blacklistEnabled) {
+                    if (basicBot.room.blacklists[bl].indexOf(mid) > -1) {
+                        API.sendChat(subChat(basicBot.chat.isblacklisted, {blacklist: bl}));
+                        return API.moderateForceSkip();
+                    }
                 }
             }
 
@@ -1195,6 +1199,7 @@
             basicBot.status = true;
             API.sendChat('/cap 1');
             API.setVolume(0);
+            $("#woot").click();
             var emojibutton = $(".icon-emoji-on");
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
@@ -1396,6 +1401,27 @@
                 }
             },
 
+            autodisableCommand: {
+                command: 'autodisable',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autodisable) {
+                            basicBot.settings.autodisable = !basicBot.settings.autodisable;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autodisable}));
+                        }
+                        else {
+                            basicBot.settings.autodisable = !basicBot.settings.autodisable;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autodisable}));
+                        }
+
+                    }
+                }
+            },
+
             autoskipCommand: {
                 command: 'autoskip',
                 rank: 'mod',
@@ -1456,7 +1482,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
-                        API.moderateBanUser(user.id, 1, API.BAN.PERMA);
+                        API.moderateBanUser(user.id, 1, API.BAN.DAY);
                     }
                 }
             },
@@ -1489,6 +1515,26 @@
                                 basicBot.room.newBlacklistedSongFunction(track);
                             }
                         }
+                    }
+                }
+            },
+
+            blinfoCommand: {
+                command: 'blinfo',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var author = API.getMedia().author;
+                        var title = API.getMedia().title;
+                        var name = chat.un;
+                        var format = API.getMedia().format;
+                        var cid = API.getMedia().cid;
+                        var songid = format + ":" + cid;
+
+                        API.sendChat(subChat(basicBot.chat.blinfo, {name: name, author: author, title: title, songid: songid}));
                     }
                 }
             },
@@ -1687,7 +1733,7 @@
 
             togglevoteskipCommand: {
                 command: 'togglevoteskip',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2550,6 +2596,11 @@
                         if (basicBot.settings.bouncerPlus) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
+												
+                        msg += basicBot.chat.blacklist + ': ';
+                        if (basicBot.settings.blacklistEnabled) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
 
                         msg += basicBot.chat.lockguard + ': ';
                         if (basicBot.settings.lockGuard) msg += 'ON';
@@ -2572,7 +2623,7 @@
                         msg += '. ';
 
                         msg += basicBot.chat.voteskip + ': ';
-                        if (Qbot.settings.voteskip) msg += 'ON';
+                        if (basicBot.settings.voteskip) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
 
@@ -2659,6 +2710,24 @@
                 }
             },
 
+            toggleblCommand: {
+                command: 'togglebl',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var temp = basicBot.settings.blacklistEnabled;
+                        basicBot.settings.blacklistEnabled = !temp;
+                        if (basicBot.settings.blacklistEnabled) {
+                          return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.blacklist}));
+                        }
+                        else return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.blacklist}));
+                    }
+                }
+            },
+						
             togglemotdCommand: {
                 command: 'togglemotd',
                 rank: 'bouncer',
@@ -2896,7 +2965,6 @@
     };
 
     loadChat(basicBot.startup);
-    
     API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!bowl') === 0){
