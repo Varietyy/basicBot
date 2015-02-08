@@ -220,7 +220,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: "http://pastebin.com/eW26rqFW",
             rulesLink: null,
             themeLink: null,
