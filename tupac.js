@@ -171,7 +171,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.4",
+        version: "2.1.266",
         status: true,
         name: "Tupac",
         loggedInID: null,
