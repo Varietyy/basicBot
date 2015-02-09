@@ -3051,6 +3051,18 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
         });
 })();*/
 
+(function(){
+        var skipping = false, skipThreshold = 8;
+        API.on(API.SCORE_UPDATE,function(score){
+                if (score.negative >= skipThreshold && !skipping) {
+                        skipping = true;
+                        API.once(API.DJ_ADVANCE,function(){skipping = false;});
+                        API.sendChat("8/8 meh's. Skipping!");
+                        API.moderateForceSkip();
+                }
+        });
+})();
+
 API.on(API.CHAT, function(data){
  
 if(data.message.indexOf('!pass') === 0){
