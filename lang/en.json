@@ -17,7 +17,7 @@
 
 
     "isopen": "The roulette is now open! Type !join to participate!",
-    "winnerpicked": "A winner has been picked! @%%NAME%% to position %%POSITION%%.",
+    "winnerpicked": "Winner! :trophy: @%%NAME%%",
 
 
     "alreadyadding": "User is already being added! Changed the desired position to %%POSITION%%.",
@@ -36,7 +36,7 @@
     "afkremove": "@%%NAME%%, you have been removed for being afk for %%TIME%%. Position %%POSITION%%. Chat at least once every %%MAXIMUMAFK%% minutes if you want to play a song.",
 
 
-    "caps": "@%%NAME%%, unglue your capslock button please.",
+    "caps": "@%%NAME%%, don't use caplock please.",
     "askskip": "@%%NAME%%, don't ask for skips.",
     "spam": "@%%NAME%%, please don't spam.",
     "roomadvertising": "@%%NAME%%, don't post links to other rooms please.",
