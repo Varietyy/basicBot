@@ -3052,7 +3052,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 })();*/
 
 (function(){
-        var skipping = false, skipThreshold = 8;
+        var skipping = false, skipThreshold = 10;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
                         skipping = true;
