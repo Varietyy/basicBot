@@ -3051,7 +3051,7 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
                 if (score.negative >= skipThreshold && !skipping) {
                         skipping = true;
                         API.once(API.DJ_ADVANCE,function(){skipping = false;});
-                        API.sendChat("8/8 meh's. Skipping!");
+                        API.sendChat("8/8 mehs. Skipping!");
                         API.moderateForceSkip();
                 }
         });
