@@ -3045,17 +3045,17 @@ API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +
 });
 
 // "@"+ API.getDJ().username +"
-/*(function(){
-        var skipping = false, skipThreshold = 10;
+(function(){
+        var skipping = false, skipThreshold = 8;
         API.on(API.SCORE_UPDATE,function(score){
                 if (score.negative >= skipThreshold && !skipping) {
                         skipping = true;
                         API.once(API.DJ_ADVANCE,function(){skipping = false;});
-                        API.sendChat("10/10 meh's. Skipping!");
+                        API.sendChat("8/8 meh's. Skipping!");
                         API.moderateForceSkip();
                 }
         });
-})();*/
+})();
 
 API.on(API.CHAT, function(data){
  
