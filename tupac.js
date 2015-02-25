@@ -3004,7 +3004,7 @@ API.sendChat("@"+ data.un +", Chase runs shit!");
 
 if(data.message.indexOf('!shelby') === 0){
 API.moderateDeleteChat(data.cid);
-API.sendChat("@"+ data.un +", Shelby don't get tired!");
+API.sendChat("@"+ data.un +", http://prntscr.com/66m3gf");
 }
 
 if(data.message.indexOf('!sam') === 0){
