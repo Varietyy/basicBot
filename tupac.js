@@ -2966,6 +2966,83 @@
 
     loadChat(basicBot.startup);
     API.on(API.CHAT, function(data){
+- 
+/*-if(data.message.indexOf('!bowl') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] Toke up! :deciduous_tree::fire:");
+-}
+-
+-if(data.message.indexOf('!lightskin') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] Lightskin Monday is a day where R&B is allowed. If you don't like it, please hit the mute button.");
+-}
+- 
+-if(data.message.indexOf('!beer') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] Cheers! :beers:");
+-}
+- 
+-if(data.message.indexOf('!burger') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] Here's your burger! :hamburger:");
+-}
+- 
+-if(data.message.indexOf('!tits') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] ( . Y . )");
+-}
+-
+-if(data.message.indexOf('!thotlevel') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat(""+ data.un +"'s thot level is over 9000!");
+-}
+-
+-if(data.message.indexOf('!variety') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("@"+ data.un +", Chase runs shit!");
+-}
+-
+-if(data.message.indexOf('!shelby') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("@"+ data.un +", http://prntscr.com/66m3gf");
+-}
+-
+-if(data.message.indexOf('!sam') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("@"+ data.un +", Sam should be on Master Chef with his cooking skills!");
+-}
+-
+-if(data.message.indexOf('!mikey') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("@"+ data.un +", Mikey is Batman!!!");
+-}
+-
+-if(data.message.indexOf('!jen') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("@"+ data.un +", http://prntscr.com/5upgbz");
+-}
+-
+-if(data.message.indexOf('!sketchers') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("["+ data.un +"] Sketchers are a popular shoeware company which is known for servicing young thots in apparel to suck dick.");
+-}
+-
+-if(data.message.indexOf('!grab') === 0){
+-API.moderateDeleteChat(data.cid);
+-API.sendChat("Grabbing this song, "+ data.un +" :star:");
+-setTimeout(function(){$(".icon-curate").click()}, 1);
+-setTimeout(function(){$($(".curate").children(".menu").children().children()[0]).mousedown()}, 1);
+-}
+-});
+-
+-API.on(API.CHAT, function(data){
+- 
+-if(data.message.indexOf('!props') === 0){
+-API.moderateDeleteChat(data.cid);
+-$('#woot').click();
+-API.sendChat(":sparkles: "+ data.un +" gives props to @"+ API.getDJ().username +" :sparkles:");
+-}
+-});*/
 
 (function(){
         var skipping = false, skipThreshold = 8;
