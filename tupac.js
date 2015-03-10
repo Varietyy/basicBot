@@ -2238,7 +2238,7 @@
                 }
             },
 
-            moveCommand: {
+/*            moveCommand: {
                 command: 'move',
                 rank: 'manager',
                 type: 'startsWith',
@@ -2269,7 +2269,7 @@
                         } else return API.sendChat(subChat(basicBot.chat.invalidpositionspecified, {name: chat.un}));
                     }
                 }
-            },
+            },*/
 
             muteCommand: {
                 command: 'mute',
