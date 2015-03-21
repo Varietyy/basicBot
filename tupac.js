@@ -2322,7 +2322,7 @@
                 }
             },
 
-            moveCommand: {
+/*            moveCommand: {
                 command: 'move',
                 rank: 'mod',
                 type: 'startsWith',
@@ -2353,7 +2353,7 @@
                         } else return API.sendChat(subChat(basicBot.chat.invalidpositionspecified, {name: chat.un}));
                     }
                 }
-            },
+            },*/
 
             muteCommand: {
                 command: 'mute',
@@ -2606,7 +2606,7 @@
                 }
             },
 
-            skipCommand: {
+/*            skipCommand: {
                 command: 'skip',
                 rank: 'bouncer',
                 type: 'exact',
@@ -2623,7 +2623,7 @@
 
                     }
                 }
-            },
+            },*/
 
             songstatsCommand: {
                 command: 'songstats',
