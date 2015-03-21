@@ -168,7 +168,7 @@
     };
 
     var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Chase N. Cashe (Variety)";
+    var botMaintainer = "Chase N. Cashe (Variety)"
     var botCreatorIDs = ["3741010", "4204939"];
 
     var basicBot = {
@@ -219,10 +219,7 @@
                 ["unavailable", "The song you played was not available for some users. "]
             ],
             afkpositionCheck: 10,
-            afkRankCheck: "manager",
-            /*motdEnabled: false,
-            motdInterval: 5,
-            motd: "Temporary Message of the Day",*/
+            afkRankCheck: "ambassador",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
