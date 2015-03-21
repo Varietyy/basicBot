@@ -220,9 +220,9 @@
             ],
             afkpositionCheck: 10,
             afkRankCheck: "manager",
-            motdEnabled: false,
+            /*motdEnabled: false,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
+            motd: "Temporary Message of the Day",*/
             filterChat: true,
             etaRestriction: false,
             welcome: true,
