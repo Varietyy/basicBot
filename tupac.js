@@ -219,7 +219,7 @@
                 ["unavailable", "The song you played was not available for some users. "]
             ],
             afkpositionCheck: 10,
-            afkRankCheck: "manager","host"
+            afkRankCheck: "manager",
             motdEnabled: false,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
