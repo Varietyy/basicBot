@@ -2322,9 +2322,9 @@
                 }
             },
 
-/*            moveCommand: {
+            moveCommand: {
                 command: 'move',
-                rank: 'mod',
+                rank: 'manager',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2353,7 +2353,7 @@
                         } else return API.sendChat(subChat(basicBot.chat.invalidpositionspecified, {name: chat.un}));
                     }
                 }
-            },*/
+            },
 
             muteCommand: {
                 command: 'mute',
