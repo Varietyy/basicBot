@@ -8,12 +8,12 @@
     "online": "Chase's Bot v%%VERSION%% online!",
 
 
-    "welcome": "Hey, %%NAME%%.",
+    "welcome": "Hey, @%%NAME%%.",
     "welcomeback": "Welcome back, @%%NAME%%.",
-    "songknown": "@%%NAME%%, this song is in the DJ history.",
+    "songknown": "@%%NAME%%, this song is in the DJ history!",
     "timelimit": "@%%NAME%%, your song is longer than %%MAXLENGTH%% minutes!",
     "permissionownsong": ":up: @%%NAME%% has permission to play their own production!",
-    "isblacklisted": "This track is on the %%BLACKLIST%% blacklist! Skipping...",
+    "isblacklisted": "This track is on the %%BLACKLIST%% blacklist!",
 
 
     "isopen": "The roulette is now open! Type !join to participate!",
@@ -25,15 +25,15 @@
 
 
     "usernotfound": "User not found.",
-    "notdisconnected": "@%%NAME%% did not disconnect during my time here.",
+    "notdisconnected": "@%%NAME%% I have not seen you disconnect.",
     "noposition": "No last position known. The waitlist needs to update at least once to register a user's last position.",
-    "toolongago": "@%%NAME%%'s last disconnect (DC or leave) was too long ago: %%TIME%%.",
+    "toolongago": "@%%NAME%%'s last disconnect was too long ago: %%TIME%%.",
     "valid": "@%%NAME%% disconnected %%TIME%% ago and should be at position %%POSITION%%.",
 
 
-    "warning1": "@%%NAME%%, you have been afk for %%TIME%%, please respond within 2 minutes or you will be removed.",
+    "warning1": "@%%NAME%%, you have been afk for %%TIME%%, please respond within 2 minutes or you will be removed!",
     "warning2": "@%%NAME%%, last warning!",
-    "afkremove": "@%%NAME%%, you have been removed for being afk for %%TIME%%. Position: %%POSITION%%.",
+    "afkremove": "@%%NAME%%, removed for AFK. [%%TIME%%] Position: %%POSITION%%.",
 
 
     "caps": "@%%NAME%%, unglue your capslock button please.",
