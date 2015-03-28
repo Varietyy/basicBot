@@ -77,8 +77,8 @@ var blockedSongs = ["Shell Shocked ft. Kill The Noise & Madsonik [Official Video
 
 var blockedArtists = []; // None yet
 
-/*beggarWords = ["can i has fan","fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans","need fan"];*/
-announcements = [];
+beggarWords = ["can i has fan","fanme","fan me","fan4fan","fan 4 fan","fan pls","fans please","need fan","more fan","fan back","give me fans","gimme fans","need fan"];
+announcements = ["Rap and Hiphop only!"];
 
 
 commandWords = ["enable","dclookup","dc","disable","cc","clearchat","hf","reqskip","historyfilt","historyfilter","userstats","saveusers","mystats","whoseregistered","register","reload","swearfilter","sf","swearfilt","autowoot","roulette","addme","ban","unmute","mute","command","commands","apply","ping","rules","theme","genre","skip","lock","unlock","say","lick","props","dope","songlink","random","download","woot","taco","meh","join","leave","votes","op","overplayed","version","source","die","define","status","8ball","flipcoin","fc","shrek","ytp","smoke","gif","kiss","tickle","fart","punish","cookie","reward","hug","none","resident","bouncer","manager","cohost","host","roll"];
