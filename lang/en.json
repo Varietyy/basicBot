@@ -8,16 +8,16 @@
     "online": "/me %%BOTNAME%% v%%VERSION%% online!",
 
 
-    "welcome": "/me Welcome %%NAME%%",
-    "welcomeback": "/me Welcome back, %%NAME%%",
+    "welcome": "/me Hey, @%%NAME%%.",
+    "welcomeback": "/me Welcome back, @%%NAME%%.",
     "songknown": "/me @%%NAME%%, this song is in the DJ history.",
-    "timelimit": "/me @%%NAME%%, your song is longer than %%MAXLENGTH%% minutes, you need permission to play longer songs.",
+    "timelimit": "/me @%%NAME%%, your song is longer than %%MAXLENGTH%% minutes!",
     "permissionownsong": "/me :up: @%%NAME%% has permission to play their own production!",
-    "isblacklisted": "/me This track is on the %%BLACKLIST%% blacklist! Skipping...",
+    "isblacklisted": "/me This track is on the %%BLACKLIST%% blacklist!",
 
 
     "isopen": "/me The roulette is now open! Type !join to participate!",
-    "winnerpicked": "/me A winner has been picked! @%%NAME%% to position %%POSITION%%.",
+    "winnerpicked": "/me Winner! :trophy: @%%NAME%% to position %%POSITION%%.",
 
     "ball": "/me %%NAME%%'s question was: \"%%QUESTION%%\" and %%BOTNAME%%'s response is: \"%%RESPONSE%%\"",
 
