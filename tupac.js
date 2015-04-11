@@ -174,7 +174,7 @@
     var basicBot = {
         version: "2.3.3",
         status: false,
-        name: "2bot Shakur",
+        name: "R&HHN Bot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/tupac.js",
         cmdLink: "http://git.io/245Ppg",
@@ -184,7 +184,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "2bot Shakur",
+            botName: "R&HHN Bot",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/en.json",
             startupCap: 1, // 1-200
