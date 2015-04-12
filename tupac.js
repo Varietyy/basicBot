@@ -2762,7 +2762,7 @@
                 }
             },
 
-            skipCommand: {
+            /*skipCommand: {
                 command: 'skip',
                 rank: 'bouncer',
                 type: 'exact',
@@ -2779,7 +2779,7 @@
 
                     }
                 }
-            },
+            },*/
 
             songstatsCommand: {
                 command: 'songstats',
