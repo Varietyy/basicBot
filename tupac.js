@@ -248,7 +248,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "2BotShakur",
+            botName: "R&HHN",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             roomLock: false, // Requires an extension to re-load the script
