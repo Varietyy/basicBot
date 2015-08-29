@@ -248,7 +248,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "R&HHN",
+            botName: "R&HHN Bot",
             language: "english",
             chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
             roomLock: false, // Requires an extension to re-load the script
@@ -294,7 +294,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: "http://pastebin.com/2wWnadqK",
             rulesLink: "http://pastebin.com/b1aTFhXu",
             themeLink: null,
@@ -303,7 +303,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
