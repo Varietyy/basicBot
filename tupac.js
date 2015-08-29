@@ -240,7 +240,7 @@
         status: false,
         name: "2BotShakur",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Varietyy/basicBot/master/tupac.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
         chat: null,
