@@ -242,7 +242,7 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/Varietyy/basicBot/master/tupac.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
+        chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -250,7 +250,8 @@
         settings: {
             botName: "R&HHN Bot",
             language: "english",
-            chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/langIndex.json",
+            chatLink: "https://rawgit.com/Varietyy/basicBot/master/lang/en.json",
+            scriptLink: "https://rawgit.com/Varietyy/basicBot/master/tupac.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
